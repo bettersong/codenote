@@ -1,0 +1,130 @@
+JS
+	JavaScript  
+		LiveScript 网景     JavaScript 
+		JScript  IE
+		....ECMAScript  JS核心标准
+
+组成
+	ECMAScript  核心语法规则
+	DOM 对文档节点的操作  
+	BOM 对浏览器的操作
+JS注释
+	// 单行注释
+	/*
+		多行注释的内容
+	*/
+JS中关键字和保留字
+	关键字  有特殊功能的单词
+		var if else for while do switch...
+		break continue....
+	保留字  将来有可能有特殊功能的单词
+		class  interface static super abstract......
+
+JS的变量
+	var关键字声明一个变量。
+		var a = 1;
+		a = 2;
+		a = 'hello';
+		var a = '1';
+		var a,b,c;
+		var a=1,b=2,c=3;
+	变量名命名规则
+		1.由字母、数字、下划线、$组成
+		2.不能以数字、下划线开始
+		3.有特殊含义，采用小驼峰命名法
+			sayName
+			sayHello
+			username
+		4.不能使用关键字和保留字
+数据类型
+	基本数据类型5种
+		undefined类型  声明了但是没有初始化的
+							显式将undefined值赋值给一个变量的
+			就只有一个undefined。
+			var a;
+			var b = undefined;
+		null类型  空，一般用来存放一个空对象的指针。
+			就只有一个值null
+			var a = null;
+		boolean类型
+			有两个值true,false
+			var a = true;
+			var b = false;
+		number类型
+			数字类型，数值类型
+				var n = 1;
+				var m = 2.34;
+		string类型  字符串类型
+			var str = 'hello';
+			var s = "hello";
+	引用数据类型3种-1种
+		Object类型 对象
+			var obj = {};
+			var o = {name:'zhangsan'};
+		Array类型  数组
+			var arr = [1,2,3];
+		Function类型  函数
+			function test(){}
+			var test = function(){}
+
+typeof取值
+	undefined
+	number
+	boolean
+	string
+	object  object/null/array
+	function
+
+
+
+// imgList:[
+
+​    // {id:1,src:'../../../static/images/404.jpg',title:'404',subtitle:'路在何方'},
+
+​    // {id:2,src:'../../../static/images/xiaochengxu.png',title:'小程序',subtitle:'小程序，大变革'},
+
+​    // {id:3,src:'../../../static/images/H5C3.png',title:'HTML5+CSS3',subtitle:'前端基本功'},
+
+​    // {id:4,src:'../../../static/images/javascript.png',title:'JavaScript',subtitle:'前端精髓'},
+
+​    // {id:5,src:'../../../static/images/php.png',title:'PHP',subtitle:'世界上最好的语言'},
+
+​    // {id:6,src:'../../../static/images/vue.png',title:'Vue',subtitle:'MVVM数据驱动视图'},
+
+​    // {id:7,src:'../../../static/images/node.png',title:'Node',subtitle:'让js走向全栈'},
+
+​    // {id:8,src:'../../../static/images/react.jpg',title:'React',subtitle:'MVVM,React'}
+
+​    // ]
+
+
+
+
+
+
+
+
+
+
+
+​	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
