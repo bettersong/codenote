@@ -1,4 +1,4 @@
-# optimize
+# optimize 优化
 
 当我们的模板 `template` 经过 `parse` 过程后，会输出生成 AST 树，那么接下来我们需要对这颗树做优化，`optimize` 的逻辑是远简单于 `parse` 的逻辑，所以理解起来会轻松很多。
 

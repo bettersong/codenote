@@ -1,4 +1,4 @@
-# parse
+# parse 解析
 
 编译过程首先就是对模板做解析，生成 AST，它是一种抽象语法树，是对源代码的抽象语法结构的树状表现形式。在很多编译技术中，如 babel 编译 ES6 的代码都会先生成 AST。
 
@@ -394,7 +394,7 @@ function handleStartTag (match) {
 `handleStartTag` 的核心逻辑很简单，先判断开始标签是否是一元标签，类似 `<img>、<br/>` 这样，接着对 `match.attrs` 遍历并做了一些处理，最后判断如果非一元标签，则往 `stack` 里 push 一个对象，并且把 `tagName` 赋值给 `lastTag`。至于 `stack` 的作用，稍后我会介绍。
 
 最后调用了 `options.start` 回调函数，并传入一些参数，这个回调函数的作用稍后我会详细介绍。
- 
+
 - 闭合标签
 
 ```js
@@ -876,15 +876,15 @@ export function parseText (
 ```
 
 `parseText` 首先根据分隔符（默认是 `{{}}`）构造了文本匹配的正则表达式，然后再循环匹配文本，遇到普通文本就 push 到 `rawTokens` 和 `tokens` 中，如果是表达式就转换成 `_s(${exp})` push 到 `tokens` 中，以及转换成 `{@binding:exp}` push 到 `rawTokens` 中。
-  
+
  对于我们的例子 `{{item}}:{{index}}`，`tokens` 就是 `[_s(item),'":"',_s(index)]`；`rawTokens` 就是 `[{'@binding':'item'},':',{'@binding':'index'}]`。那么返回的对象如下：
- 
+
  ```js
 return {
   expression: '_s(item)+":"+_s(index)',
   tokens: [{'@binding':'item'},':',{'@binding':'index'}]
 }
-```
+ ```
 
 ## 流程图
 
